@@ -7,20 +7,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-    <context:property-placeholder location="classpath:musicPlayer.properties"/>
-    <bean id="musicBean"
-          class="ua.org.springcourse.ClassicalMusic">
-    </bean>
-    <bean id="musicPlayer"
-          class="ua.org.springcourse.MusicPlayer"
-          scope ="prototype">
-        <property name="Music" ref="musicBean"/>
+    <context:component-scan base-package="ua.org.springcourse"/>
 
-        <!--property name="name" value="Some name"/-->
-        <!--property name="volume" value="50"/-->
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-
-    </bean>
 
 </beans>

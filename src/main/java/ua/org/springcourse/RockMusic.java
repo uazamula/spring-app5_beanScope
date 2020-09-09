@@ -2,10 +2,10 @@ package ua.org.springcourse;
 
 import org.springframework.stereotype.Component;
 
-@Component("musicBean")
-public class ClassicalMusic implements Music{
+@Component("rockMusic")
+public class RockMusic implements Music{
     @Override
     public String getSong() {
-        return "Sonate 17";
+        return "Smoke...";
     }
 }
